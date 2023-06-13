@@ -6,9 +6,9 @@ function Home() {
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
     const Github_API_URL = "https://api.github.com/users/";
-    const token = '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';
+    const token = process.env.REACT_APP_GITHUB_TOKEN;
     const options = {
-        headers: { Authorization: `Bearer ${token}`}
+        headers: { Authorization: `"Bearer ${token}"`}
     };
 
     const searchUser = (event) => {
@@ -18,19 +18,18 @@ function Home() {
 
     useEffect(() => {
         if (name) {
-          axios.get(`${Github_API_URL}${name}`, options)
-            .then(result => {
-                // Redirect to user page or update state accordingly
-                console.log(result.data); // User data received from the API
-                const url = `${window.location.origin}/${name}`;
-                window.location.href = url;
-              setMessage('');
-            })
-            .catch(function (error) {
-              // Handle error
-              setName('');
-              setMessage('User not found');
-            });
+            axios.get(`${Github_API_URL}${name}`, options)
+                .then(result => {
+                    // Redirect to user page or update state accordingly
+                    const url = `${window.location.pathname}/${name}`;
+                    window.location.href = url;
+                setMessage('');
+                })
+                .catch(function (error) {
+                // Handle error
+                setName('');
+                setMessage('User not found');
+                });
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [name]);
