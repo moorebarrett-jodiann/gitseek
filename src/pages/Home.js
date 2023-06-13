@@ -21,14 +21,15 @@ function Home() {
             axios.get(`${Github_API_URL}${name}`, options)
                 .then(result => {
                     // Redirect to user page or update state accordingly
-                    const url = `${window.location.pathname}/${name}`;
+                    const currentUrl = window.location.href;
+                    const url = `${currentUrl}/${name}`;
                     window.location.href = url;
-                setMessage('');
+                    setMessage('');
                 })
                 .catch(function (error) {
-                // Handle error
-                setName('');
-                setMessage('User not found');
+                    // Handle error
+                    setName('');
+                    setMessage('User not found');
                 });
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
