@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
 
@@ -10,6 +11,7 @@ function Home() {
     const options = {
         headers: { Authorization: `"Bearer ${token}"`}
     };
+    const navigate = useNavigate();
 
     const searchUser = (event) => {
         event.preventDefault();
@@ -21,10 +23,11 @@ function Home() {
             axios.get(`${Github_API_URL}${name}`, options)
                 .then(result => {
                     // Redirect to user page or update state accordingly
-                    const currentUrl = window.location.href;
-                    const slash = currentUrl.endsWith('/') ? '' : '/';
-                    const url = `${currentUrl}${slash}${name}`;
-                    window.location.href = url;
+                    // const currentUrl = window.location.href;
+                    // const slash = currentUrl.endsWith('/') ? '' : '/';
+                    // const url = `${currentUrl}${slash}${name}`;
+                    // window.location.href = url;
+                    navigate(`/${name}`); // Use navigate function for redirection
                     setMessage('');
                 })
                 .catch(function (error) {
