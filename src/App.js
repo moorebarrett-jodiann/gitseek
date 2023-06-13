@@ -6,7 +6,8 @@ import { Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <>
-		<main>
+		<div className="overlay"></div>
+      	<main className="main-content">
 			<Routes >
 				<Route path="/" element={<Home />} />
 				<Route path="/:user" element={<User />} /> 

@@ -47,7 +47,12 @@ function User() {
                                 <p><span>{userProfile.following}</span>Following</p>
                             </div>
                             <div className="profile-link">
-                                <a href={userProfile.html_url} target="_blank" rel="noreferrer" to={userProfile.html_url}>View Guthub Profile</a>
+                                <a 
+                                    href={userProfile.html_url} 
+                                    target="_blank" rel="noreferrer" 
+                                    to={userProfile.html_url}>
+                                        View Guthub Profile
+                                </a>
                             </div>
                         </div>
                         <div className="profile-repositories">

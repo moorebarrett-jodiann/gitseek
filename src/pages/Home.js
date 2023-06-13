@@ -22,12 +22,8 @@ function Home() {
         if (name) {
             axios.get(`${Github_API_URL}${name}`, options)
                 .then(result => {
-                    // Redirect to user page or update state accordingly
-                    // const currentUrl = window.location.href;
-                    // const slash = currentUrl.endsWith('/') ? '' : '/';
-                    // const url = `${currentUrl}${slash}${name}`;
-                    // window.location.href = url;
-                    navigate(`/${name}`); // Use navigate function for redirection
+                    // Use navigate function for redirection
+                    navigate(`/${name}`); 
                     setMessage('');
                 })
                 .catch(function (error) {

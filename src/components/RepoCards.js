@@ -53,7 +53,7 @@ function RepoCards(props) {
                                 </p>
                                 <p className="repo-updated-date">Last updated: {formatDate(item.updated_at)}</p>
                             </div>
-                            <p className="repo-description">{item.description}</p>
+                            {(item.description) && <p className="repo-description">{item.description}</p>}
                         </div>
                     ))}
                 </>
