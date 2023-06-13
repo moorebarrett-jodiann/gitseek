@@ -21,7 +21,7 @@ function Home() {
             axios.get(`${Github_API_URL}${name}`, options)
                 .then(result => {
                     // Redirect to user page or update state accordingly
-                    const url = `${window.location.pathname}${name}`;
+                    const url = `${window.location.pathname}/${name}`;
                     window.location.href = url;
                 setMessage('');
                 })
