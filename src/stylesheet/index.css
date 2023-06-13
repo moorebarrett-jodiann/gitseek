@@ -1,0 +1,295 @@
+@charset "UTF-8";
+@import "./reset.css";
+
+:root {
+    --app-dark-bg:#1a1d28;
+    --app-light-grey-bg:#696c79;
+    --app-medium-bg:#282b38;
+    --app-blue-bg:#24346d;
+    --app-light-bg:#f0eeee;
+    --app-white:rgb(244, 246, 248);
+    --app-red:#ff3c57;
+    --app-red-hover:#e31e38;
+    --app-green:#1dd2ae;
+    --app-green-hover:#20c0a0;
+    --app-purple:#833cff;
+    --app-purple-hover:#6e1dfa;
+    --app-orange:#ff833c;
+    --app-orange-hover:#fe7a2d;
+    --app-blue:#3c57ff;
+    --app-blue-hover:#364ee6;
+    --app-blue-bg-color: #146ebe;
+    --app-btn-height: 36px;
+    --app-btn-width: 56px;
+    --app-light-text-color: #f4f6f8;
+    --app-medium-text-color: #babbbb;
+    --app-dark-text-color: #1c1c1c;
+    --app-h1: 35px;
+    --app-h2: 25px;
+    --app-h3: 15px;
+    --app-h4: 5px;
+    --app-letter-spacing: 0.2px;
+    --app-header-line-height: 70px;
+    --app-text-line-height: 50px;
+    
+    /*transitions and settings*/
+    --app-transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    --app-btn-padding: 8px 15px;
+    --app-border-radius: 4px;
+    --app-letter-spacing: 0.2px;
+    --app-main-transition: all 0.4s ease-in-out;
+}
+
+body { 
+    background: url("../images/pattern-bg.jpg") center center / cover;
+}
+
+.container {
+    width: min(100% - 30px, 1200px);
+    margin-inline: auto;
+}
+
+main {
+    min-width: 450px;
+}
+
+.flexbox {
+    display: flex;
+}
+
+/* ======================================== HOME ================================================================ */
+
+.home-container {
+    display: grid;
+    place-items: center; 
+    height: 100vh;
+}
+
+.form-container {
+    padding: 25px;
+    text-align: center;
+    width: 500px;
+    background-color: #1a1c24e7; 
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+}
+
+.form-container h2 {
+    color: var(--app-light-text-color);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.form-container h2 i {
+    color: var(--app-orange);
+}
+
+.form-container input:not([type="submit"]) {
+    width: 70%;
+    height: 45px;
+    padding: 0 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--app-light-text-color);
+    letter-spacing: 0.2px;
+    text-align: left;
+    margin-right: 10px;
+    transition: var(--app-transition);
+}
+
+.form-container input:not([type="submit"]):focus {
+    border: 1px solid rgba(255, 255, 255, .25);
+}
+
+.form-container input[type="submit"] {
+    padding: 10px 25px;
+    width: 30%;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    transition: all 0.25s ease-in-out;
+    background-color: var(--app-orange);
+    border: 1px solid var(--app-orange);
+    color: var(--app-light-text-color);
+    transition: var(--app-transition);
+    text-transform: uppercase;
+}
+
+.form-container input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: var(--app-orange-hover);
+    border: 1px solid #f7ab80;
+}
+
+.form-container p.error {
+    font-size: 14px;
+    width: 100%;
+    color: var(--app-orange);
+    height: 20px;
+    display: grid;
+    place-items: center; 
+    margin-top: 10px;
+}
+
+/* ======================================== PROFILE =============================================================== */
+
+.profile-details-container {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.profile-details-container .details-container {
+    width: 100%;
+}
+
+.details-container .profile-info {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    padding: 40px;
+}
+
+.details-container .profile-info .profile-img {
+    width: 15%;
+    border: 1px solid var(--app-orange);
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+    margin-bottom: 10px;
+}
+
+.details-container .profile-info .profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details-container .profile-info .profile-name {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.details-container .profile-info .repo-stats p {
+    padding: 10px 20px;
+    display: grid;
+    place-items: center;
+    color: var(--app-dark-text-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.details-container .profile-info .repo-stats p span {
+    color: var(--app-orange-hover);
+    font-weight: 700;
+    display: block;
+}
+
+.details-container .profile-info .profile-link {
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    background-color: var(--app-orange);
+    border: 1px solid var(--app-orange);
+    transition: var(--app-transition);
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.details-container .profile-info .profile-link a {
+    letter-spacing: var(--app-letter-spacing);
+    text-decoration: none;
+    color: var(--app-light-text-color);
+    position: relative;
+    transition: var(--app-transition);
+}
+
+.details-container .profile-info .profile-link:hover {
+    cursor: pointer;
+    background-color: var(--app-orange-hover);
+    border: 1px solid #f7ab80;
+}
+
+/* ======================================== PROFILE REPOSITORIES ================================================== */
+
+.details-container .profile-repositories {
+    padding: 40px;
+}
+
+.details-container .profile-repositories h2 {
+    color: var(--app-dark-text-color);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.details-container .profile-repositories .repo-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.details-container .profile-repositories .repo-cards .repo-card {
+    width: 100%;
+    background-color: rgba(241, 241, 241, 0.878);
+    border: 1px solid rgba(131, 131, 131, 0.089);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px -10px, rgba(0, 0, 0, 0.1) 0px 5px 5px -10px;
+    border-radius: 5px;
+    padding: 20px 40px;
+}
+
+.details-container .profile-repositories .repo-cards .repo-card .flexbox {
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.details-container .profile-repositories .repo-cards .repo-card .flexbox .repo-name {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.details-container .profile-repositories .repo-cards .repo-card .flexbox .repo-name a {
+    letter-spacing: var(--app-letter-spacing);
+    color: var(--app-green);
+    text-decoration: none;
+    position: relative;
+    transition: var(--app-transition);
+}
+
+.details-container .profile-repositories .repo-cards .repo-card .flexbox .repo-name a:hover {
+    color: var(--app-green-hover);
+    cursor: pointer;
+}
+
+.details-container .profile-repositories .repo-cards .repo-card .flexbox .repo-name::before {
+    content: "\2022"; 
+    color: var(--app-green);
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 20px;
+}
+
+.details-container .profile-repositories .repo-cards .repo-card .flexbox .repo-updated-date {
+    font-size: 12px;
+    color: var(--app-medium-text-color);
+}
+
+.details-container .profile-repositories .repo-cards .repo-card .repo-description {
+    font-size: 14px;
+    font-style: italic;
+}
