@@ -22,7 +22,8 @@ function Home() {
                 .then(result => {
                     // Redirect to user page or update state accordingly
                     const currentUrl = window.location.href;
-                    const url = `${currentUrl}/${name}`;
+                    const slash = currentUrl.endsWith('/') ? '' : '/';
+                    const url = `${currentUrl}${slash}${name}`;
                     window.location.href = url;
                     setMessage('');
                 })
