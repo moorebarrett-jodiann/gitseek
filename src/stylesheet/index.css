@@ -241,7 +241,7 @@ main {
 /* ======================================== PROFILE REPOSITORIES ================================================== */
 
 .details-container .profile-repositories {
-    padding: 20px 40px;
+    padding: 20px 40px 40px 40px;
 }
 
 .details-container .profile-repositories h2 {
