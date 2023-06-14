@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/gitseek/static/css/main.fc9a9fa9.css",
+    "main.css": "/gitseek/static/css/main.35869cc3.css",
     "main.js": "/gitseek/static/js/main.40ff2120.js",
     "static/media/pattern-bg.jpg": "/gitseek/static/media/pattern-bg.7446ab214ea6a1330c69.jpg",
     "index.html": "/gitseek/index.html",
-    "main.fc9a9fa9.css.map": "/gitseek/static/css/main.fc9a9fa9.css.map",
+    "main.35869cc3.css.map": "/gitseek/static/css/main.35869cc3.css.map",
     "main.40ff2120.js.map": "/gitseek/static/js/main.40ff2120.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc9a9fa9.css",
+    "static/css/main.35869cc3.css",
     "static/js/main.40ff2120.js"
   ]
 }
