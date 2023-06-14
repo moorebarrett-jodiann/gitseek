@@ -1,3 +1,20 @@
+/**
+ * SETTING UP ENVIRONMENT VARIABLES
+ * 
+ * > Create a .env file in the root of your project (alongside package.json) and add the following line:
+ * REACT_APP_GITHUB_TOKEN=your_token_here
+ * 
+ * > Install the dotenv package by running the following command in your project directory:
+ * npm install dotenv
+ * 
+ * > Update your code to use the environment variable:
+ * const token = process.env.REACT_APP_GITHUB_TOKEN;
+ * 
+ * > restart your development server after making changes to the environment variables.
+ * 
+ * Note: Environment variables prefixed with REACT_APP_ are automatically made available in your React app by Create React App.
+ */
+
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
