@@ -303,14 +303,6 @@ main {
     cursor: pointer;
 }
 
-.details-container .profile-repositories .repo-cards .repo-card .flexbox .repo-name::before {
-    content: "\2022"; 
-    color: var(--app-green);
-    display: inline-block;
-    margin-right: 1rem;
-    font-size: 20px;
-}
-
 .details-container .profile-repositories .repo-cards .repo-card .flexbox .repo-updated-date {
     font-size: 12px;
     color: var(--app-medium-text-color);
