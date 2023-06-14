@@ -63,7 +63,11 @@ function User() {
                         </div>
                     </div>
                 ) : (
-                    <p>Loading profile details...</p>
+                    <div className="container">
+                        <div className="loading-container">
+                            <p className="loading">Loading profile details...</p>
+                        </div>
+                    </div>
                 )}
             </section>
         </div>

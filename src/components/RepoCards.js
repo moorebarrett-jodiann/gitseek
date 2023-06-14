@@ -36,7 +36,7 @@ function RepoCards(props) {
             })
             .catch(function (error) {
                 // Handle error
-                setMessage('User not found');
+                setMessage('No Repositories available');
             });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     });
@@ -58,7 +58,7 @@ function RepoCards(props) {
                     ))}
                 </>
             ) : (
-                <p>{message}</p>
+                <p className="repo-message">{message}</p>
             )}
         </>
     )

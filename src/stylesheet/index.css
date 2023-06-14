@@ -84,13 +84,14 @@ main {
     padding: 25px;
     text-align: center;
     width: 500px;
-    background-color: #1a1c24e7; 
+    /* background-color: #1a1c24e7;  */
+    background-color: rgba(241, 241, 241, 0.878);
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
 }
 
 .form-container h2 {
-    color: var(--app-light-text-color);
+    color: var(--app-dark-text-color);
     font-size: 3rem;
     margin-bottom: 20px;
 }
@@ -103,13 +104,13 @@ main {
     width: 70%;
     height: 45px;
     padding: 0 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid transparent;
+    background-color: rgba(0, 0, 0, 0.051);
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px; */
     font-size: 17px;
     font-weight: 400;
-    color: var(--app-light-text-color);
+    color: var(--app-dark-text-color);
     letter-spacing: 0.2px;
     text-align: left;
     margin-right: 10px;
@@ -117,7 +118,7 @@ main {
 }
 
 .form-container input:not([type="submit"]):focus {
-    border: 1px solid rgba(255, 255, 255, .25);
+    border: 1px solid rgba(0, 0, 0, 0.053);
 }
 
 .form-container input[type="submit"] {
@@ -125,7 +126,6 @@ main {
     width: 30%;
     text-align: center;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
     font-size: 17px;
     font-weight: 600;
     letter-spacing: 0.2px;
@@ -159,6 +159,16 @@ main {
     width: 100%;
     display: grid;
     place-items: center;
+}
+
+.container .loading-container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.container .loading-container .loading {
+    font-size: 14px;
 }
 
 .profile-details-container .details-container {
@@ -274,7 +284,7 @@ main {
 }
 
 .details-container .profile-repositories .repo-cards .repo-card .flexbox .repo-name {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
 }
 
@@ -288,6 +298,8 @@ main {
 
 .details-container .profile-repositories .repo-cards .repo-card .flexbox .repo-name a:hover {
     color: var(--app-green-hover);
+    text-decoration: underline;
+    text-decoration-color: var(--app-green-hover);
     cursor: pointer;
 }
 
@@ -308,4 +320,8 @@ main {
     font-size: 14px;
     font-style: italic;
     margin-top: 10px;
+}
+
+.details-container .profile-repositories .repo-cards .repo-message {
+    font-size: 14px;
 }
